@@ -1,0 +1,13 @@
+window.sr= ScrollReveal({reset:true})
+sr.reveal('.tituloApresentacao',{duration:4000})
+sr.reveal('.fotoPerfil',{duration:4000})
+sr.reveal('.iAm',{duration:4000})
+sr.reveal('.imgSeta',{duration:3000})
+// sr.reveal('.skillUm',{duration:3000})
+sr.reveal('.javascript',{duration:4500})
+sr.reveal('.css',{duration:4500})
+sr.reveal('.html',{duration:4500})
+sr.reveal('.react',{duration:4500})
+sr.reveal('.bootstrap',{duration:4500})
+sr.reveal('.github',{duration:4500})
+
