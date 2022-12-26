@@ -11,4 +11,4 @@ sr.reveal('.react',{duration:4500,delay: 500})
 sr.reveal('.bootstrap',{duration:4500,delay: 500})
 sr.reveal('.github',{duration:4500,delay: 500})
 
-sr.reveal('p',{origin:'left',delay:100 ,distance:'-520px', duration:3000})
+// sr.reveal('.sobre',{origin:'left',delay:100 ,distance:'-520px', duration:3000})
