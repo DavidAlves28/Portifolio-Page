@@ -2,7 +2,18 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    box-sizing: inherit;
 
+}
+
+/* body{
+  height: 100vh;
+    width: 100vw;
+} */
+html {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 66.5%;
 }
 
 
@@ -22,7 +33,6 @@
     list-style: none;
     height: 12vh;
     width: 100vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 2px;
 }
 
@@ -210,7 +220,7 @@
     visibility: hidden;
     color: #f4f4f4;
     letter-spacing: 2px;
-    
+
 
 }
 
@@ -244,7 +254,7 @@
     color: white;
     font-size: larger;
     grid-column: 1/4;
-    box-shadow: 0px 0px 7px 2px  rgba(21, 21, 21, 0.971);
+    box-shadow: 0px 0px 7px 2px rgba(21, 21, 21, 0.971);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 20px 20px;
@@ -269,7 +279,7 @@
 .sobre {
     display: flex;
     justify-content: space-evenly;
-    width: 88vw;
+    width: 90vw;
     background-color: #222;
     color: #fff;
 
@@ -316,26 +326,26 @@
     grid-template-rows: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
-    box-shadow: 0px 0px 7px  rgba(21, 21, 21, 0.971);
-    width: 80%;
+    box-shadow: 0px 0px 7px 1px rgba(21, 21, 21, 0.971);
+    width: 90vw;
     border-radius: 20px;
     text-align: center;
     padding: 30px 30px;
-    background-color: #2222;  
-   
+    background-color: #2222;
+
 }
 
-  
+
 
 .skillUm img {
-    height: 60px;
+    height: 65px;
     border-radius: 15px;
-    box-shadow: 1px 3px 7px 3px black;
-
 }
 
 /* posicoes para os icones */
 .javascript {
+    box-shadow: 1px 1px 7px 1px yellow;
+    background-color: yellow;
     grid-column: 2;
     grid-row: 2;
     visibility: hidden;
@@ -344,30 +354,40 @@
 
 
 .css {
+    box-shadow: 1px 1px 7px 1px blue;
+    background-color: blue;
     grid-column: 1;
     grid-row: 4;
     animation: flip 5s infinite alternate 1s;
 }
 
 .html {
+    box-shadow: 1px 1px 7px 1px orangered;
+    background-color: orangered;
     grid-column: 3;
     grid-row: 4;
     animation: flip 5s infinite alternate 2s;
 }
 
 .react {
+    box-shadow: 1px 1px 7px 1px #23a6d5;
+    background-color: #23a6d5;
     grid-column: 4;
     grid-row: 2;
     animation: flip 5s infinite alternate 1s
 }
 
 .bootstrap {
+    box-shadow: 1px 1px 7px 1px #8006ec;
+    background-color: #8006ec;
     grid-column: 5;
     grid-row: 4;
     animation: flip 3s infinite alternate 2s
 }
 
 .github {
+    box-shadow: 1px 1px 7px 1px #222;
+    background-color: #2222;
     grid-column: 6;
     grid-row: 2;
     animation: flip 3s infinite alternate 2s
@@ -382,41 +402,114 @@
 
 }
 
-/*  projetos */
+/*  projetos carrocel*/
 
-.projetos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    
-    gap: 10px;
-    width: 80vw;
-    height: 100%;
-}
-.projetostmlcss{
-    
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-    box-shadow: 0px 0px 7px  rgba(21, 21, 21, 0.971);
-    width: min-content;
+
+
+.content {
+    height: 80vh;
+    width: 90vw;
     border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar {
+    height: 17px;
+    width: 70px;
+    border: 2px solid black;
+    cursor: pointer;
+    transform: .6s;
+}
+
+.bar:hover {
+    background-color: #222;
+}
+
+input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 90%;
+    margin: 30px;
+
+}
+
+.slide { 
+    width: 25%;
+    transition: .4s;
+}
+
+.slide img {
+    margin-top: 10%;
+    height: 50%;
+    width: 80%;
+    box-shadow: 0 0 7px 1px;
+}
+
+.slide img:hover {
+    cursor: pointer;
+}
+
+.slide button {
+    animation: bounce 3s infinite alternate;
+    margin: 50%;
+    height: 3rem;
+    width: 8rem;
+    border-radius: 8px;
+    background-color: #2222;        
+
+}
+.slide button:hover{
+    animation: none;
+}
+.slide button a {
+    text-decoration: none;
+}
+.slide .detalhes{
     text-align: justify;
-    padding: 10px 10px;
-    background-color: #2222;  
-    height: 320px;
+    ;
 }
-.projetostmlcss:hover{ 
-    background: #222;
-    color: white;
-} 
-.projetostmlcss img { 
-    height: 200px;
+
+#radio1:checked~.s1 {
+    margin-left: -0;
 }
+
+#radio2:checked~.s1 {
+    margin-left: -25%;
+}
+
+#radio3:checked~.s1 {
+    margin-left: -50%;
+}
+
+#radio4:checked~.s1 {
+    margin-left: -75%;
+}
+
+#slide1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 1px 1px 7px white;
+
+    /* background-color: cadetblue; */
+}
+
+/* carrocel teste fim */
+
+
 
 /* Footer */
 .listaFooter {
