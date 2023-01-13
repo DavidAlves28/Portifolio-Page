@@ -549,10 +549,10 @@ input {
 /* Mobile */
 @media screen and (max-width:768px) {
     .containerHeader {
-        width: 100vw;
-        display: fixed;
-        height: 50%;
-        font-size: 1.7rem;
+        width: 100vw; 
+        display: block;
+        height: 50%; 
+        font-size: 1.7rem; 
         gap: 2%;
     }
 
