@@ -1,0 +1,691 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 66.5%;
+}
+
+
+.containerHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background: linear-gradient(-255deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    overflow: hidden;
+    list-style: none;
+    height: 12vh;
+    width: 100vw;
+    letter-spacing: 2px;
+}
+
+
+
+
+.containerHeader a {
+    color: #ffff;
+}
+
+
+/* lista do menu e tag a para redirecionar */
+.containerHeader li a {
+    color: #fff;
+    display: block;
+    list-style: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-right: 1px solid #f4f4f4;
+
+}
+
+/* hover para lista do menu */
+.containerHeader li a:hover,
+.containerHeader .menu-start:hover {
+    border: 1px solid;
+    background-clip: padding-box;
+    border-radius: 10px;
+    text-decoration: underline;
+}
+
+/* texto "Menu" */
+.containerHeader .logo {
+    display: block;
+    float: left;
+    font-size: 2rem;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* lista do menu */
+.containerHeader .menu {
+    clear: both;
+    list-style: none;
+    max-height: 0;
+    transition: max-height .4s ease-out;
+
+}
+
+/* label */
+.containerHeader .menu-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 20px;
+    position: relative;
+    user-select: none;
+}
+
+/* span do label */
+.containerHeader .menu-icon .navicon {
+    background-color: #222;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2 ease-out;
+    width: 18px;
+}
+
+/* trasição span label  */
+.containerHeader .menu-icon .navicon:before,
+.containerHeader .menu-icon .navicon:after {
+    background: #2222;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+}
+
+/*  posição da transição before*/
+.containerHeader .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.containerHeader .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/*  escondendo checkbox */
+.containerHeader .menu-start {
+    display: none;
+}
+
+.containerHeader .menu-start:checked~.menu {
+    max-height: 240px;
+}
+
+/* muda forma das barras de cima  */
+.containerHeader .menu-start:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+/* muda forma das barras de baixo */
+.containerHeader .menu-start:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.containerHeader .menu-start:checked~.menu-icon:not(.steps) .navicon:before,
+.containerHeader .menu-start:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+.containerMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 11s ease infinite;
+    height: 100%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 88vw;
+    background-image: linear-gradient(-45deg, rgb(252, 248, 248), #201f1f);
+}
+
+
+.apresentacao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 99vw;
+    height: 100vh;
+
+    letter-spacing: 1px;
+}
+
+/* background animado */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.apresentacao img {
+    z-index: 1;
+    visibility: hidden;
+    grid-column: 2;
+    grid-row: 2;
+    height: 32vh;
+    box-shadow: 1px 1px 7px 1px rgba(21, 21, 21, 0.971);
+    border-radius: 84px;
+
+}
+
+.apresentacao h2 {
+    grid-column: 2;
+    grid-row: 4;
+    visibility: hidden;
+    color: #f4f4f4;
+    letter-spacing: 2px;
+
+
+}
+
+ .iAm {
+    margin-right: 260px;
+    padding: 5px 10px;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #222;
+    position: absolute;
+    top: 120px;
+    animation: cardPerfil 2s backwards;
+    color: rgba(255,255,255, .75);
+} 
+
+
+.apresentacao span {
+    border: 2px solid black transparent;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 20px;
+    animation: cardPerfil 2s backwards;
+    box-shadow: 0px 0px 7px 2px rgba(21, 21, 21, 0.971);
+    background: #2222;
+
+}
+
+.tituloApresentacao {
+    color: white;
+    font-size: larger;
+    grid-column: 1/4;
+    box-shadow: 0px 0px 7px 2px rgba(21, 21, 21, 0.971);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 20px;
+    animation: cardPerfil 2s backwards;
+    font-size: xx-large;
+    grid-column: 1/4;
+    grid-row: 3;
+    background-color: #2222;
+}
+
+.seta-baixo {
+    grid-column: 2;
+    grid-row: 4/5;
+}
+
+.seta-baixo img {
+    height: 40px;
+    visibility: hidden;
+    animation: bounce 2s infinite alternate;
+}
+
+.sobre {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90vw;
+    background-color: #222;
+    color: #fff;
+
+}
+
+
+.sobre aside {
+    margin-top: 5%
+}
+
+.sobre aside p {
+    margin: 3%;
+    width: 90%;
+    text-align: justify;
+}
+
+/* Habilidades  */
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    gap: 2%;
+    width: 100vw;
+    height: 100%;
+    background-repeat: no-repeat round;
+    color: #ffff;
+}
+
+.habilidades h2 {
+    text-shadow: 1px 1px 5px ;
+}
+
+.skillUm {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 0px 7px 1px rgba(21, 21, 21, 0.971), 2px 2px 7px 1px rgba(21, 21, 21, 1);
+    width: 90vw;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px 30px;
+    background-color: #2222;
+}
+
+.skillUm img {
+    height: 65px;
+    border-radius: 15px;
+}
+
+/* posicoes para os icones */
+.javascript {
+    box-shadow: 1px 1px 7px 1px yellow;
+    background-color: yellow;
+    grid-column: 2;
+    grid-row: 2;
+    visibility: hidden;
+    animation: flip 5s infinite alternate;
+}
+
+.css {
+    box-shadow: 1px 1px 7px 1px blue;
+    background-color: blue;
+    grid-column: 1;
+    grid-row: 4;
+    animation: flip 5s infinite alternate 1s;
+}
+
+.html {
+    box-shadow: 1px 1px 7px 1px orangered;
+    background-color: orangered;
+    grid-column: 3;
+    grid-row: 4;
+    animation: flip 5s infinite alternate 2s;
+}
+
+.react {
+    box-shadow: 1px 1px 7px 1px #23a6d5;
+    background-color: #23a6d5;
+    grid-column: 4;
+    grid-row: 2;
+    animation: flip 5s infinite alternate 1s
+}
+
+.bootstrap {
+    box-shadow: 1px 1px 7px 1px #8006ec;
+    background-color: #8006ec;
+    grid-column: 5;
+    grid-row: 4;
+    animation: flip 3s infinite alternate 2s
+}
+
+.github {
+    box-shadow: 1px 1px 7px 1px #222;
+    background-color: #2222;
+    grid-column: 6;
+    grid-row: 2;
+    animation: flip 3s infinite alternate 2s
+}
+
+.habilidades li {
+    list-style: none;
+    font-size: 25px;
+    text-shadow: 1px 1px 9px;
+
+}
+
+/*  projetos carrocel*/
+.content {
+    height: 70vh;
+    width: 80vw;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.navigation {
+    position: absolute;
+    width: 25%;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid; */
+}
+
+.bar {
+    padding: 5px 8px;
+    border: 1px solid black;
+    cursor: pointer;
+    transform: .6s;
+    border-radius: 50%;
+    color: rgb(218, 215, 215);
+    box-shadow: 0 0 5px #222;
+}
+
+.bar:hover {
+    background-color: #222;
+   
+}
+
+input {
+    display: none;
+}
+
+/* Container onde contém os slides */
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+
+/*  estrutura de cada slide  */
+.slide {
+    width: 25%;
+    transition: .4s;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: baseline;
+}
+
+/*  conteúdo dos slides */
+.slide .detalhes {
+    overflow: hidden;
+    display: grid;
+    font-size: 1.8rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.slide h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px #222;
+}
+
+.slide p {
+    padding: 5px;
+    text-align: justify;
+    margin: 10px 5px;
+}
+
+.slide img {
+    margin: 0 auto;
+    height: 70%;
+    width: 80%;
+    box-shadow: 0 0 7px 1px;
+}
+
+.slide img:hover {
+    cursor: pointer;
+}
+
+.slide button {
+    animation: pulse 1s infinite alternate;
+    height: 4rem;
+    width: 12rem;
+    background-color: #222;
+    margin: 0 auto;
+
+}
+
+.slide button:hover {
+    animation: none;
+    background-color: #2222;
+
+}
+
+.slide button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+#radio1:checked~.s1 {
+    margin-left: -0;
+
+}
+
+#radio2:checked~.s1 {
+    margin-left: -25%;
+}
+
+#radio3:checked~.s1 {
+    margin-left: -50%;
+}
+
+#radio4:checked~.s1 {
+    margin-left: -75%;
+}
+
+
+/* carrocel teste fim */
+
+
+
+/* Footer */
+.listaFooter {
+    height: 8vh;
+    width: 100vw;
+    background-color: rgb(218, 215, 215);
+    position: relative;
+    bottom: 0px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    align-items: center;
+    list-style: none;
+
+}
+
+/* tamanho da imagem */
+.listaFooter img {
+    height: 5vh;
+
+}
+
+#pFooter{
+    color: #222;
+    
+}
+
+
+/*  Responsividade Menu Hamburguer */
+/* Mobile */
+@media screen and (max-width:768px) {
+    .containerHeader {
+        width: 100vw; 
+        display: block;
+        height: 50%; 
+        font-size: 1.7rem; 
+        gap: 2%;
+    }
+
+    .iAm {
+        font-size: 1.7rem;
+        width: 25rem;
+        margin: 0 auto;
+    }
+    .tituloApresentacao{
+        font-size: 2rem;
+      
+        margin: 0 auto;
+        height:50%;  
+        text-align: center;
+    }
+    .habilidades{
+        width: 95vw;
+       height: min-content;
+    }
+    .skillUm{
+        width: 100%;  
+    }
+    .skillUm img {
+        overflow: hidden;
+        width: 90%;
+        height: 90%;
+    }
+
+    /* container dos Projetos */
+    .content{
+       height: 80vh;
+       width: 95vw;
+    }
+    .slides{
+        width: 100%;
+       
+    }
+    /* slides dos projetos */
+    .slide{
+        margin: 7px;
+        height: 80%;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap: 4%;
+    }
+    /* informações do projeto */
+    .detalhes{
+        grid-row:2/4 ;
+        overflow: hidden;
+        height: 100%;
+    }
+    .detalhes button {
+        width: 100%;
+        height: 8vh;
+        font-size: 2.3rem;
+    }
+    /* div da imagem projeto */
+    .inner{
+        grid-row: 1/2;
+          width: 100%;
+    }
+    /* imagem projeto */
+    .inner img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*  LOGICA CRIADA PARA ESCONDER E RENDERIZAR SLIDES */
+    #radio1:checked~ .s2, .s3,.s4 {
+       display: none;
+        
+    }
+    
+    #radio2:checked~.s1 ,.s3 , .s4 {
+        display: none;    
+    }
+    #radio2:checked~.s2{
+        display: grid;
+    }
+    
+    #radio3:checked~.s1, .s3 , .s4 {
+        display: none;    
+
+    }
+    #radio3:checked~.s3{
+        display: grid;
+    }
+    
+    #radio4:checked~.s1 ,.s2,.s3 {
+        display: none;    
+
+    }
+    #radio4:checked~.s4{
+        display: grid;
+    }
+    .navigation{
+        font-size:2.4rem;
+        gap: 10px;
+        width: 80%;
+    }
+    .bar{
+        border-radius: 2px;
+        width: 100%;
+        height: 100%;
+    }
+    .sobre{
+        font-size: 2rem;
+        width: 99% ;
+    }  
+    #pFooter{
+        font-size: 1.7rem;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .containerHeader li {
+        float: left;
+    }
+
+    .containerHeader li a {
+        padding: 20px 30px;
+    }
+
+    .containerHeader .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .containerHeader .menu-icon {
+        display: none;
+    }
+}
