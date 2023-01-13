@@ -6,10 +6,6 @@
 
 }
 
-/* body{
-  height: 100vh;
-    width: 100vw;
-} */
 html {
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
@@ -35,6 +31,9 @@ html {
     width: 100vw;
     letter-spacing: 2px;
 }
+
+
+
 
 .containerHeader a {
     color: #ffff;
@@ -199,20 +198,11 @@ html {
     visibility: hidden;
     grid-column: 2;
     grid-row: 2;
-    /* animation: cardPerfil 2s; */
     height: 32vh;
     box-shadow: 1px 1px 7px 1px rgba(21, 21, 21, 0.971);
-
     border-radius: 84px;
 
 }
-
-/* @keyframes cardPerfil {
-    0% {
-        transform: translateX(-400px);
-    }
-
-} */
 
 .apresentacao h2 {
     grid-column: 2;
@@ -224,7 +214,7 @@ html {
 
 }
 
-.iAm {
+ .iAm {
     margin-right: 260px;
     padding: 5px 10px;
     grid-column: 2;
@@ -232,11 +222,9 @@ html {
     background-color: #222;
     position: absolute;
     top: 120px;
-    visibility: hidden;
     animation: cardPerfil 2s backwards;
-    color: #fff;
-}
-
+    color: rgba(255,255,255, .75);
+} 
 
 
 .apresentacao span {
@@ -296,9 +284,6 @@ html {
     text-align: justify;
 }
 
-
-
-
 /* Habilidades  */
 
 .habilidades {
@@ -310,14 +295,12 @@ html {
     gap: 2%;
     width: 100vw;
     height: 100%;
-
     background-repeat: no-repeat round;
-
     color: #ffff;
 }
 
 .habilidades h2 {
-    text-shadow: 1px 1px 5px;
+    text-shadow: 1px 1px 5px ;
 }
 
 .skillUm {
@@ -326,16 +309,13 @@ html {
     grid-template-rows: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
-    box-shadow: 0px 0px 7px 1px rgba(21, 21, 21, 0.971);
+    box-shadow: 0px 0px 7px 1px rgba(21, 21, 21, 0.971), 2px 2px 7px 1px rgba(21, 21, 21, 1);
     width: 90vw;
     border-radius: 20px;
     text-align: center;
     padding: 30px 30px;
     background-color: #2222;
-
 }
-
-
 
 .skillUm img {
     height: 65px;
@@ -351,7 +331,6 @@ html {
     visibility: hidden;
     animation: flip 5s infinite alternate;
 }
-
 
 .css {
     box-shadow: 1px 1px 7px 1px blue;
@@ -393,8 +372,6 @@ html {
     animation: flip 3s infinite alternate 2s
 }
 
-
-
 .habilidades li {
     list-style: none;
     font-size: 25px;
@@ -403,12 +380,9 @@ html {
 }
 
 /*  projetos carrocel*/
-
-
-
 .content {
-    height: 80vh;
-    width: 90vw;
+    height: 70vh;
+    width: 80vw;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -417,44 +391,80 @@ html {
 
 .navigation {
     position: absolute;
-    bottom: 20px;
+    width: 25%;
+    bottom: 10px;
     left: 50%;
     transform: translate(-50%);
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid; */
 }
 
 .bar {
-    height: 17px;
-    width: 70px;
-    border: 2px solid black;
+    padding: 5px 8px;
+    border: 1px solid black;
     cursor: pointer;
     transform: .6s;
+    border-radius: 50%;
+    color: rgb(218, 215, 215);
+    box-shadow: 0 0 5px #222;
 }
 
 .bar:hover {
     background-color: #222;
+   
 }
 
 input {
     display: none;
 }
 
+/* Container onde contém os slides */
 .slides {
     display: flex;
     width: 400%;
-    height: 90%;
-    margin: 30px;
-
+    height: 100%;
+    margin: 0 auto;
 }
 
-.slide { 
+
+
+/*  estrutura de cada slide  */
+.slide {
     width: 25%;
     transition: .4s;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: baseline;
+}
+
+/*  conteúdo dos slides */
+.slide .detalhes {
+    overflow: hidden;
+    display: grid;
+    font-size: 1.8rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.slide h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px #222;
+}
+
+.slide p {
+    padding: 5px;
+    text-align: justify;
+    margin: 10px 5px;
 }
 
 .slide img {
-    margin-top: 10%;
-    height: 50%;
+    margin: 0 auto;
+    height: 70%;
     width: 80%;
     box-shadow: 0 0 7px 1px;
 }
@@ -464,27 +474,30 @@ input {
 }
 
 .slide button {
-    animation: bounce 3s infinite alternate;
-    margin: 50%;
-    height: 3rem;
-    width: 8rem;
-    border-radius: 8px;
-    background-color: #2222;        
+    animation: pulse 1s infinite alternate;
+    height: 4rem;
+    width: 12rem;
+    background-color: #222;
+    margin: 0 auto;
 
 }
-.slide button:hover{
+
+.slide button:hover {
     animation: none;
+    background-color: #2222;
+
 }
+
 .slide button a {
     text-decoration: none;
+    color: #fff;
 }
-.slide .detalhes{
-    text-align: justify;
-    ;
-}
+
+
 
 #radio1:checked~.s1 {
     margin-left: -0;
+
 }
 
 #radio2:checked~.s1 {
@@ -499,13 +512,6 @@ input {
     margin-left: -75%;
 }
 
-#slide1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    box-shadow: 1px 1px 7px white;
-
-    /* background-color: cadetblue; */
-}
 
 /* carrocel teste fim */
 
@@ -533,20 +539,136 @@ input {
 
 }
 
-
-
-/*  Responsividade Menu Hamburguer */
-
-@media screen and (max-width:768px) {
-    .containerHeader {
-        width: 100vw;
-        display: block;
-        height: 50%;
-        position: relative;
-    }
+#pFooter{
+    color: #222;
+    
 }
 
 
+/*  Responsividade Menu Hamburguer */
+/* Mobile */
+@media screen and (max-width:768px) {
+    .containerHeader {
+        width: 100vw;
+        display: fixed;
+        height: 50%;
+        font-size: 1.7rem;
+        gap: 2%;
+    }
+
+    .iAm {
+        font-size: 1.7rem;
+        width: 25rem;
+        margin: 0 auto;
+    }
+    .tituloApresentacao{
+        font-size: 2rem;
+      
+        margin: 0 auto;
+        height:50%;  
+        text-align: center;
+    }
+    .habilidades{
+        width: 95vw;
+       height: min-content;
+    }
+    .skillUm{
+        width: 100%;  
+    }
+    .skillUm img {
+        overflow: hidden;
+        width: 90%;
+        height: 90%;
+    }
+
+    /* container dos Projetos */
+    .content{
+       height: 80vh;
+       width: 95vw;
+    }
+    .slides{
+        width: 100%;
+       
+    }
+    /* slides dos projetos */
+    .slide{
+        margin: 7px;
+        height: 80%;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap: 4%;
+    }
+    /* informações do projeto */
+    .detalhes{
+        grid-row:2/4 ;
+        overflow: hidden;
+        height: 100%;
+    }
+    .detalhes button {
+        width: 100%;
+        height: 8vh;
+        font-size: 2.3rem;
+    }
+    /* div da imagem projeto */
+    .inner{
+        grid-row: 1/2;
+          width: 100%;
+    }
+    /* imagem projeto */
+    .inner img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*  LOGICA CRIADA PARA ESCONDER E RENDERIZAR SLIDES */
+    #radio1:checked~ .s2, .s3,.s4 {
+       display: none;
+        
+    }
+    
+    #radio2:checked~.s1 ,.s3 , .s4 {
+        display: none;    
+    }
+    #radio2:checked~.s2{
+        display: grid;
+    }
+    
+    #radio3:checked~.s1, .s3 , .s4 {
+        display: none;    
+
+    }
+    #radio3:checked~.s3{
+        display: grid;
+    }
+    
+    #radio4:checked~.s1 ,.s2,.s3 {
+        display: none;    
+
+    }
+    #radio4:checked~.s4{
+        display: grid;
+    }
+    .navigation{
+        font-size:2.4rem;
+        gap: 10px;
+        width: 80%;
+    }
+    .bar{
+        border-radius: 2px;
+        width: 100%;
+        height: 100%;
+    }
+    .sobre{
+        font-size: 2rem;
+        width: 99% ;
+    }  
+    #pFooter{
+        font-size: 1.7rem;
+    }
+
+
+}
 
 @media (min-width: 768px) {
     .containerHeader li {

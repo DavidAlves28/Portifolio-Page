@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio DAVID</title>
-    <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/scrollreveal@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -27,89 +27,93 @@
     <main class="containerMain">
         <section id="apresentacao" class="apresentacao">
 
-            <span class="iAm"> <b>Olá, eu sou o David!</b></span>
+            <span class="iAm">
+                 <b >Olá, eu sou o David!</b>
+                </span>
 
-            <img class='fotoPerfil' src="imagens/fotoPerfil.png" alt="fotoPerfil">
+            <img class='fotoPerfil' src="/assets/imagens/fotoPerfil.png" alt="fotoPerfil">
             <h1 class="tituloApresentacao"> Desenvolvedor Front-End! </h1>
 
 
-            <p class="seta-baixo"><img class="imgSeta" src="imagens/setas-para-baixo.png" /></p>
+            <p class="seta-baixo"><img class="imgSeta" src="/assets/imagens/setas-para-baixo.png" /></p>
         </section>
         <br>
         <br>
         <section class="habilidades">
             <h2> TECNOLOGIAS </h2>
+            <br />
             <aside class="skillUm">
-                <img class="javascript" src="imagens/Icons/javascript.svg">
-                <img class="css" src="imagens/Icons/css3.svg">
-                <img class="html" src="imagens/Icons/html-5.svg">
-                <img class="react" src="imagens/Icons/react.svg">
-                <img class="bootstrap" src="imagens/Icons/bootstrap.png" />
-                <img class="github" src="imagens/github.png" />
+                <img class="javascript" src="/assets/imagens/Icons/javascript.svg">
+                <img class="css" src="/assets/imagens/Icons/css3.svg">
+                <img class="html" src="/assets/imagens/Icons/html-5.svg">
+                <img class="react" src="/assets/imagens/Icons/react.svg">
+                <img class="bootstrap" src="/assets/imagens/Icons/bootstrap.png" />
+                <img class="github" src="/assets/imagens/github.png" />
 
             </aside>
             <br>
 
         </section>
-        <br><br>
+        <span id="projetos"></span>
+        <br><br><br><br><br>
         <section class="content">
             <div class="slides">
                 <input type="radio" name="radio" id="radio1" checked>
                 <input type="radio" name="radio" id="radio2">
                 <input type="radio" name="radio" id="radio3">
                 <input type="radio" name="radio" id="radio4">
+
+                <!-- Primeiro Card dos slides -->
                 <aside class="slide s1" id="slide1">
                     <div class="detalhes">
-                        <h1>Calculdora em React1 </h1>
-                            <p>
-                                Calculdora com funcionalidades simples, com operadores matemáticos soma,multiplicação,
-                                divisão e
-                                subtração. Utilizando React.js, Hooks(useState), styled-components e testes Unitários
+                        <h1>Projeto Front End React </h1>
+                        <p>
+                            A proposta do projeto é conseguir implementar funcionalidades básicas de uma loja como
+                            carrinho , lista de produtos , adicionar e remover itens do carrinho. Utilizando
+                            Styled-components, Hooks, JSX, Props,Fluxo de dados no React ,Renderização
+                            condicional,localStorage.
+                        </p>
+                        <button>
+                            <a href="https://projeto-frontend-react.vercel.app/" target="_blank">Ver Projeto</a>
+                        </button>
+                    </div>
+                    <div class="inner"><img src="/assets/imagens/img-projetos/telaInicial.gif" alt="projeto intro web">
+                </aside>
+                <aside class="slide s2">
+                    <div class="detalhes">
+
+                        <h1>Calculdora em React </h1>
+                        <p>
+                            Calculdora com funcionalidades simples, com operadores matemáticos soma,multiplicação,
+                            divisão e
+                            subtração. Utilizando React.js, Hooks(useState), styled-components e testes Unitários
                             (Jest),
                             Vercel para deploy.
                         </p>
-                        <button><a href="https://calculadora-react-f5hr.vercel.app/" target="_blank">
-                            Ver Projeto </a></button>
-                        </div>
-                  
-                    <img src="imagens/img-projetos/calculdora-react.png" alt="projeto landing page">
-
-
+                        <button>
+                            <a href="https://calculadora-react-f5hr.vercel.app/" target="_blank">
+                                Ver Projeto </a>
+                        </button>
+                    </div>
+                    <img src="/assets/imagens/img-projetos/CalculadoraReact.gif" alt="projeto landing page">
                 </aside>
-
-                <aside class='slide'>
-                    <h1>Landing Page Transportadora</h1>
-                    <p>
-                        Projeto com tema empresa de transporte, com tela de cadrasto, serviços e rastreio.
-                        utilizando a
-                        mesma paleta de cores da Logo dada. tecnologias Javascript\DOM, HTML e CSS.
-                    </p>
-
-                    <button><a href="https://cagey-sisters.surge.sh/" target="_blank">
-                            Ver Projeto </a></button>
-                    <img src="imagens/img-projetos/LandingPage.png" alt="projeto landing page">
-
-
-                </aside>
-
-                <aside class="slide">
-
+                <!-- Segundo Card dos slides -->
+                <aside class="slide s3">
                     <div class="detalhes">
                         <h1>Jogo Black Jack ou 21 </h1>
                         <p>
                             Projeto consiste criar jogo Black Jack ou 21, implementando regras básicas do jogo.
                             Utilizando
-                            tecnologias Javascript\DOM, HTML e CSS.
+                            tecnologias Javascript\DOM, HTML e CSS(Responsivo).
                         </p>
-
-                        <button><a href="http://mundane-love.surge.sh/" target="_blank"> Ver Projeto </a></button>
+                        <button>
+                            <a href="http://mundane-love.surge.sh/" target="_blank"> Ver Projeto </a>
+                        </button>
                     </div>
-                    <div class="inner"><img src="imagens/img-projetos/Black jack.png" alt="projeto black jack">
-                        \ </div>
+                    <div class="inner"><img src="/assets/imagens/img-projetos/Blackjack.gif" alt="projeto black jack">
                 </aside>
-
-                <aside class="slide">
-
+                <!--  Quanto Card dos slides -->
+                <aside class="slide s4">
                     <div class="detalhes">
                         <h1>Projeto Intro WEB</h1>
                         <p>
@@ -117,19 +121,20 @@
                             da
                             história com resumo e autores. Utilizando tecnologias Javascript\DOM, HTML e CSS.
                         </p>
-                        <button><a href="https://delirious-rabbits.surge.sh/" target="_blank">Ver Projeto</a></button>
+                        <button>
+                            <a href="https://delirious-rabbits.surge.sh/" target="_blank">Ver Projeto</a>
+                        </button>
                     </div>
-
-                    <div class="inner"><img src="imagens/img-projetos/projeto_intro_web.png" alt="projeto intro web">
-                    </div>
-
-            </div>
-            </aside>
-            <div class="navigation">
-                <label class='bar ' for="radio1">1</label>
-                <label class='bar ' for="radio2">2</label>
-                <label class='bar ' for="radio3">3</label>
-                <label class='bar ' for="radio4">4</label>
+                    <div class="inner"><img src="/assets/imagens/img-projetos/projeto_intro_web.png"
+                            alt="projeto intro web">
+                </aside>
+                <!-- menu abaixo das slides para navegação! -->
+                <div class="navigation">
+                    <label class='bar ' for="radio1">1</label>
+                    <label class='bar ' for="radio2">2</label>
+                    <label class='bar ' for="radio3">3</label>
+                    <label class='bar ' for="radio4">4</label>
+                </div>
             </div>
         </section>
         <br>
@@ -137,7 +142,6 @@
             <aside>
                 <p> DAVID ALVES COSTA</p>
                 <p>Quero lhe agradecer primeiramente por estar aqui. </p>
-
                 <p>Oque dizer sobre mim ? Talvez uma das perguntas mais difíceis que eu vinha tentando responder.</br>
                     O tempo me ajudou a responder essa pergunta. Començando pela minha família , sou Pai do
                     Gui de sete anos. Casado com uma mulher sensacional há 8 anos mas juntos há 13 anos , Nilce, sou uma
@@ -145,7 +149,6 @@
                     vem tentando
                     melhorar cada dia.
                 </p>
-
                 <p>
                     Na vida profissional começei a trabalhar cedo, com quatorze anos, em supermercado. Passei por
                     diversas
@@ -198,23 +201,22 @@
                 </p>
 
             </aside>
-            <!-- <img src="imagens/fotoPerfil.png" alt="fotoPerfil"> -->
         </section>
-
-
-
-
     </main>
     <footer class="containerFooter">
         <ul class="listaFooter">
+            <p id="pFooter">DAVID ALVES COSTA</p>
             <li> <a href="https://www.linkedin.com/in/david-alves-costa-7a2b90145/" target="_blank"
-                    rel="noopener noreferrer"><img src="imagens/linkedin.png" </a></li>
-            <li> <a href="https://github.com/DavidAlves28" target="_blank" rel="noopener noreferrer"> <img
-                        src="imagens/github.png" alt=""></a></li>
-
+                    rel="noopener noreferrer">
+                    <img src="/assets/imagens/linkedin.png">
+                </a>
+            </li>
+            <li> <a href="https://github.com/DavidAlves28" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/imagens/github.png" alt="">
+                </a>
+            </li>
         </ul>
     </footer>
-
 </body>
 
 </html>
